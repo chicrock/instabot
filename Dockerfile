@@ -7,3 +7,5 @@ WORKDIR /opt/app
 COPY . /opt/app
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
+
+CMD ["python", "examples/infinity_stuff.py", "-u", USER_ID, "-p", USER_PWD, "tag1", "tag2"]
