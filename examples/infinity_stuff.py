@@ -25,12 +25,17 @@ bot.login(username=args.u, password=args.p,
           proxy=args.proxy)
 
 wait = 5 * 60  # in seconds
+little_wait = 10
 
 while True:
     for hashtag in args.hashtags:
         bot.like_hashtag(hashtag)
-        time.sleep(wait)
+
+    time.sleep(little_wait)
+
+    for hashtag in args.hashtags:
         users = bot.get_hashtag_users(hashtag)
         bot.follow_users(users)
+
     time.sleep(wait)
     
