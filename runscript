@@ -1,0 +1,2 @@
+docker build  -t instabot .
+docker run -d --rm --name instabot instabot

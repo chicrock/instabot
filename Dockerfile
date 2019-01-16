@@ -8,4 +8,4 @@ COPY . /opt/app
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
-CMD ["python", "examples/infinity_stuff.py", "-u", USER_ID, "-p", USER_PWD, "tag1", "tag2"]
+CMD ["python", "examples/infinity_stuff.py", "-u", "pickmovieapp", "-p", "vlranql!234", "영화추천", "영화", "영화순위", "박스오피스", "장르별", "극장"]
